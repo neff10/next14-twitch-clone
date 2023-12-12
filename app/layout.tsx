@@ -6,6 +6,7 @@ import { Toaster } from 'sonner';
 import './globals.css'
 
 import { ThemeProvider } from '@/components/theme-provider'
+import { Redirect } from '@/components/redirect';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,7 +30,7 @@ export default function RootLayout({
             storageKey="gamehub-theme"
           >
             <Toaster theme="light" position="bottom-center" />
-            {children}
+            <Redirect />
           </ThemeProvider>
         </body>
       </html>
